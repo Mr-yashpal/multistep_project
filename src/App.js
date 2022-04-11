@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+const initialFormData = {
+  fName: '',
+  lName: '',
+  dateOfBirth: "",
+  email: '',
+  address: '',
+  bigMessage: '',
+  mChoice1: 0,
+  mChoice2: 1,
+  male: 0,
+  female: 1,
+  bChoice1: 0,
+  bChoice2: 0,
+};
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const wrongFormData = {
+  wrongFName: '',
+  wrongLName: '',
+  wrongDateOfBirth: '',
+  wrongEmail: '',
+  wrongAddress: '',
+};
 
-export default App;
+export {initialFormData, wrongFormData};

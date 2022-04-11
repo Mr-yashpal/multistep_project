@@ -1,38 +1,228 @@
-.App {
-  text-align: center;
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    /* background: url(https://mywildalberta.ca/images/GFX-MWA-Parks-Reservations.png) no-repeat; */
+    width: 20px;
+    height: 20px;
+    border-width: thin;
+    /* position: ; */
+    /* display: flex;
+    justify-self: flex-start; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: rgb(249,248,250);
 }
+img{
+    height:90vh;
+    border-top-left-radius : 30px;
+    border-bottom-left-radius : 30px;
+}
+.sectionClass{
+    height:90vh;
+    width: auto;
+    display: flex;
+    /* flex-direction: column; */
+    background-color: #FFFFFF;
+    /* background-color: black; */
+    margin: 30px 60px;
+    border-radius: 30px;
+    color: black;
+    /* color: grey; */
+    font-family: 'Courier New', Courier, monospace;
+}
+.title{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.title div{
+    margin-left: 0px;
+}
+.pageColour{
+    background-color: #1175FD;
+}
+main{
+    width: 70%;
+    margin:5% 8%;
+}
+/* hr{
+    margin: 38px 0px 24px 0px;
+} */
+.steps{
+    display: flex;
+    flex-direction: column;
+}
+.step{
+    color: rgb(192, 187, 187);
+}
+span{
+    background-color: #F9F8FA;
+    padding: 10px 15px 10px 15px;
+    border-radius: 7px;
+    color: #9A9DB8;
+    margin: 0px 10px 0px 0px;
+}
+.heading{
+    font-size:x-large;
+    margin: 10px 0px 30px 0px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+}
+button{
+    background-color: #FFFFFF;
+    border: 0px;
+    border-radius: 4px;
+    padding: 15px 35px ;
+    /* margin: 10px; */
+    /* position: relative; */
+}
+.next-button{
+    background-color: #1175FD;
+    color: white;
+}
+.buttonDiv{
+    display: flex;
+    justify-content: flex-end;
+
+}
+.form-label{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+.form-inner-style{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap:wrap; */
+    margin-bottom: 25px;
+}
+.calender{
+    height: 15px;
+    width: 180px;
+}
+.form-input{
+    padding: 10px;
+    border-radius: 7px;
+    border-width: 1px;
+    border-color: rgb(221, 212, 212);
+    border-style:solid;
+    cursor: pointer;
+}
+.form-input:hover{
+    border-color: #1c73ec;
+}
+.form-input:focus{
+    cursor:text;
+}
+.form-address-div{
+    width: 95%;
+
+}
+.form-address{
+    margin-bottom: 0px;
+
+    width: 100%;
+}
+.error{
+    font-size: x-small;
+    margin-top: 0;
+    display: none;
+}
+.wrong{
+    border-color: red;
+}
+.wrong-text{
+    color: red;
+    display: block;
+}
+.checkout-img{
+    height:auto;
+    /* width: auto; */
+    border: 1px solid;
+    border-color: #9A9DB8;
+    background-color: #ecedf0;
+
+    border-radius: 10px;
+    margin: 10px;
+}
+.checkout-div{
+    display: flex;
+    justify-content: space-between;
+}
+.textarea{
+    height:110px;
+    width:100%;
+    border-color: #1175FD;
+    border-radius: 6px;
+    padding: 14px;
+    margin-top: 4px;
+    /* rows:"5";
+    cols:"50" */
+}
+.messageChoice{
+    display: flex;
+    font-size: 14px;
+    margin: 20px 0px 40px 0px;
+}
+.messageChoice1{
+    margin-left: 30px;
+}
+.checkbox{
+    margin-bottom: 25px;
+}
+.genderImg{
+    width: 10%;
+    height: 10px;
+}
+.checkbox-text{
+    font-size:small;
+}
+.submitform{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #EDEFF0; */
+    flex-direction: column;
+}
+.submitformData{
+    margin-top: 0px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.submitform div{
+    margin-top: 10px;
+}
+.submitImage{
+    height: 30vh;
+    margin: -10px;
+}
+/* border-radius: 100%; */
+
+/* spanClass{
+    background-color: #1175FD;
+    color: white;
+} */
+/* a{
+    color: #9A9DB8;
+} */
+
+/* HIDE RADIO */
+[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  /* IMAGE STYLES */
+  [type=radio] + img {
+    cursor: pointer;
   }
-  to {
-    transform: rotate(360deg);
+  
+  /* CHECKED STYLES */
+  [type=radio]:checked + img {
+    outline: 1px solid #1175FD;
+    background-color: #e3ecf8;
   }
-}

@@ -1,17 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { useReducer, useEffect, useState } from 'react';
+import {reducer} from "./reducers.js"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ReactDOM from "react-dom";
+import SignUp from './App/SignUp';
+import Message from './App/Message';
+import CheckBox from './App/CheckBox';
+import Submit from './App/Submit';
+import NoPage from "./App/NoPage";
+import {initialFormData} from './App.js'
+import './App.css';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+export default function App() {
+  const [state, dispatch] = useReducer(reducer, initialFormData);
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<SignUp signUp={state} dispatch={dispatch} reducer={reducer}/>} />
+        <Route path="message" element={<Message message={state} dispatch={dispatch} reducer={reducer}/>} />
+        <Route path="checkBox" element={<CheckBox checkBox={state} dispatch={dispatch} reducer={reducer}/>} />
+        <Route path="submit" element={<Submit  FormData={state}/>} />
+        <Route path="*" element={<NoPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDOM.render(<App />, document.getElementById("root"));
