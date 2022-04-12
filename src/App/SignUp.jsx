@@ -3,7 +3,7 @@ import {reducerWrong} from "../reducers"
 import img1 from '../images/img1.png'
 import TopLayout from "./TopLayout";
 import BottomLayout from "./BottomLayout";
-import {wrongFormData} from '../App.js'
+import {wrongFormData} from '../App'
 
 import 'react-calendar/dist/Calendar.css';
 
