@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/multistep_project/static/css/main.501c8971.css",
-    "main.js": "/multistep_project/static/js/main.800eb98c.js",
+    "main.css": "/multistep_project/static/css/main.7e3852c1.css",
+    "main.js": "/multistep_project/static/js/main.b84aedc9.js",
     "static/media/img1.png": "/multistep_project/static/media/img1.7f430b6f9de66c253715.png",
     "static/media/img2.png": "/multistep_project/static/media/img2.f906265cdf55d6264855.png",
     "static/media/img3.png": "/multistep_project/static/media/img3.6de3d73b0be7220c131b.png",
     "index.html": "/multistep_project/index.html",
-    "main.501c8971.css.map": "/multistep_project/static/css/main.501c8971.css.map",
-    "main.800eb98c.js.map": "/multistep_project/static/js/main.800eb98c.js.map"
+    "main.7e3852c1.css.map": "/multistep_project/static/css/main.7e3852c1.css.map",
+    "main.b84aedc9.js.map": "/multistep_project/static/js/main.b84aedc9.js.map"
   },
   "entrypoints": [
-    "static/css/main.501c8971.css",
-    "static/js/main.800eb98c.js"
+    "static/css/main.7e3852c1.css",
+    "static/js/main.b84aedc9.js"
   ]
 }
